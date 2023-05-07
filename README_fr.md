@@ -28,17 +28,20 @@ respectivement.
 # Bash
 
 ## cow_kindergarten.sh
-Very simply here I implemented a for loop `for i in {1..10}`.
+Très simplement, j'ai implémenté une boucle for
+`for i in {1..10}`.
 
-I also used the following commands for the
-first time, they will show up quite a lot.
+J'ai également utilisé les commandes
+suivantes pour la première fois.
+pour la première fois, elles apparaîtront
+assez souvent.
 
 `cowsay $i;
  sleep 1;
  clear;
 `
 
-Full code:
+Code complet :
 
 ```
 #!/bin/bash
@@ -58,9 +61,9 @@ cowsay -T U "fin d'exercise"
 
 ## cow_primaryschool.sh
 
-Very similar to previous.
+Très similaire au précédent.
 
-Full code:
+Code complet :
 
 ```
 #!/bin/bash
@@ -87,9 +90,9 @@ cowsay -T U "fin d'exercise"
 
 ## cow_highschool.sh
 
-Like before.
+Comme auparavant.
 
-Full code:
+Code complet :
 
 ```
 #!/bin/bash
@@ -117,14 +120,18 @@ cowsay -T U "fin d'exercise"
 
 ## cow_college.sh
 
-I had to spend some time debugging this, only to
-realise that cowsay doesn't like being told to output
-'0'. As seen in my comments, I found that piping
-an echo command to cowsay solved the issue.
+J'ai dû passer un peu de temps à déboguer ce
+problème, et je me suis rendu compte que cowsay
+n'aime pas qu'on lui dise de sortir un message.
+que cowsay n'aime pas qu'on lui dise de sortir '0'.
+'0'. Comme indiqué dans mes commentaires, j'ai
+trouvé que le fait d'envoyer une commande
+une commande echo à cowsay a résolu le problème.
 
-Otherwise, just implementing basic fibonacci logic.
+Sinon, il s'agit juste d'implémenter la logique
+de base de Fibonacci.
 
-Full code:
+Code complet :
 
 ```
 #!/bin/bash
@@ -185,11 +192,12 @@ cowsay -T U "fin d'exercise"
 
 ## cow_university.sh
 
-Use modulo arithmetic with two inner loops to determine
-whether number is prime. Track with boolean
+Utiliser l'arithmétique modulo avec deux boucles
+internes pour déterminer si un nombre est premier.
+si un nombre est premier. Suivi avec le booléen
 is_prime.
 
-Full code:
+Code complet :
 
 ```
 #!/bin/bash
@@ -245,26 +253,28 @@ cowsay -T U "fin d'exercise"
 
 ## smart_cow.sh
 
-Instead of using bc or other easier solutions, I
-took some of the concepts learned in class, as well
-as doing some extra reading on regular expressions,
-to split the given argument into `operand1`,
-`operator` and `operand2`.
+Au lieu d'utiliser bc ou d'autres solutions plus
+faciles, j'ai repris certains des concepts appris
+en classe, ainsi que des lectures supplémentaires
+sur les expressions régulières, pour diviser
+l'argument donné en `operand1`,
+`operator` et `operand2`.
 
-Once this was handled, I was able to perform
-if-else checks and echo the result.
+Une fois que cela a été fait, j'ai pu effectuer
+des vérifications de type if-else et afficher
+le résultat.
 
-I had some problems with figuring out how to
-handle multiplication, as `*` is a special character
-in bash. In the end, I found a solution whereby
-the variable holding `operator` is initialised
-with an escape character '\'.
+J'ai eu quelques problèmes pour trouver comment
+gérer la multiplication, car `*` est un caractère
+spécial dans bash. Finalement, j'ai trouvé la
+solution suivante la variable contenant `operator`
+est initialisée avec le caractère d'échappement '\'.
 
-Note: the result will only be printed to the
-cow's eyes if its absolute value is less than
-100, i.e, it is two digits.
+Note : le résultat ne sera imprimé aux yeux de la
+vache que si sa valeur absolue est inférieure à
+100, c'est-à-dire s'il s'agit de deux chiffres.
 
-Full code:
+Code complet :
 
 ```
 #!/bin/bash
@@ -327,18 +337,17 @@ fi
 
 ## crazy_cow.sh
 
-Originally I was investigating generating some
-interesting sequences from number theory.
+À l'origine, j'enquêtais sur la génération de
+certains séquences intéressantes de la théorie
+des nombres.
 
-One of which was the sequence of **perfect
-numbers**,
-positive integers that are equal to the sum of
-their proper divisors, excluding the
-number itself.
+L'un d'eux était la séquence de **perfect numbers**,
+entiers positifs qui sont égaux à la somme de
+leurs propres diviseurs, à l'exclusion des
+nombre lui-même.
 
-The code for this first attempt can be
-found here:
-
+Le code de cette première tentative peut être
+trouvé ici :
 ```
 #!/bin/bash
 
@@ -384,31 +393,33 @@ done
 cowsay -T U "fin d'exercise"
 
 ```
-This used a variable `perfect_numbers_found` to
-keep track. Interested in analysing the time
-complexity, I timed the execution of the
-program, and got cowsay to print both the perfect
-number found, and the time it took to find it,
-during its output.
+Cela a utilisé une variable `perfect_numbers_found`
+pour garder une trace. Intéressé par l'analyse
+du temps complexité, j'ai chronométré l'exécution
+des programme, et a obtenu cowsay pour imprimer
+à la fois le parfait numéro trouvé, et le temps
+qu'il a fallu pour le trouver,
+lors de sa sortie.
 
-What I found is that it became incredibly slow
-after the first three perfect numbers were
-found.
+Ce que j'ai trouvé, c'est qu'il est devenu
+incroyablement lent après que les trois premiers
+nombres parfaits aient été trouvé.
 
-Finding the 4th took ~11 minutes, and I didn't
-feel like waiting around long enough for the
-5th!
+Trouver le 4e a pris environ 11 minutes, et je ne
+l'ai pas fait envie d'attendre assez longtemps
+pour le 5ème !
 
-In any case, I realised that this was perhaps
-not the most user friendly utility, owing to
-its time complexity.
+En tout cas, je me suis rendu compte que c'était
+peut-être pas l'utilitaire le plus convivial,
+en raison de sa complexité temporelle.
 
-So, in the end, I decided to implement a
-**factorial calculator**. The user inputted
-`n` is multiplied by `n-1`,
-`n-2`, etc... until it is multiplied by `1`.
+J'ai donc finalement décidé de mettre en place
+un **calculatrice factorielle**. L'utilisateur
+a saisi `n` est multiplié par `n-1`,
+`n-2`, etc... jusqu'à ce qu'il soit multiplié
+par `1`.
 
-Full code:
+Code complet :
 
 ```
 #!/bin/bash
@@ -452,8 +463,8 @@ cowsay -T U "fin d'exercise"
 
 # C
 
-My C program lets the user call with the
-following flags:
+Mon programme C permet à l'utilisateur d'appeler
+avec le drapeaux suivants :
 
 ```
 -e <custom eye string> 'My cowsay message' 
@@ -462,36 +473,44 @@ following flags:
 -p <desired ASCII art width> <image_path> 'My cowsay message' 
 ```
 
-`-e` and `-t` are straightforward, letting the user
-customise the cowsay cow.
+`-e` et `-t` sont simples, permettant à l'utilisateur
+customisez la vache cowsay.
 
-`-d` replaces a standard cowsay cow with a dragon.
+`-d` remplace une vache cowsay standard par un
+dragon.
 
-`-p` is the most interesting flag. It 'pretty prints' a custom
-ASCII artwork which prints a given image in ASCII art at a given
-width, then below concatenates an ASCII banner.
+`-p` est le drapeau le plus intéressant. Il
+"imprime assez" une coutume Illustration ASCII
+qui imprime une image donnée dans l'art ASCII
+à un moment donné largeur, puis ci-dessous
+concatène une bannière ASCII.
 
-I had the idea when looking back through my camera roll
-and finding I had an actual picture of a cow that I
-had taken on holidays in Dunmore East in Ireland. I thought
-it would be very interesting to get a real cow
-to say something!
- 
-I achieved this using the jp2a and figlet libraries, respectively.
+J'ai eu l'idée en regardant dans ma pellicule
+et découvrir que j'avais une vraie photo d'une
+vache que j'ai avait pris des vacances à Dunmore
+East en Irlande. Je pensais que ce serait très
+intéressant d'avoir une vraie vache qui disait
+quelque chose!
 
-Note that it works best when directed towards an
-output file as in`> output.txt`. If a great enough
-width is selected, the generated text will be
-quite large, and will need to be viewed after
-zooming out quite far.
+J'ai réalisé cela en utilisant les
+bibliothèques jp2a et figlet, respectivement.
 
-The `newcow.c` is simply the main file for handling user input
-and calling the relevant functions. Most of the functionality
-is in `citation.c` with some constants stored in
-`constants.c`. The .h file of both of these is imported into
-`newcow.c`
+Notez que cela fonctionne mieux lorsqu'il est
+dirigé vers un fichier de sortie comme
+`> output.txt`. Si un assez grand `width`
+est sélectionné, le texte généré sera
+assez grand, et devra être vu après
+dézoomer assez loin.
 
-My full `newcow.c` code is here:
+Le `newcow.c` est simplement le fichier principal
+pour gérer les entrées de l'utilisateur et appeler
+les fonctions pertinentes. La plupart des
+fonctionnalités est dans `citation.c` avec
+quelques constantes stockées dans
+`constantes.c`. Le fichier .h des deux est
+importé dans `newcow.c`.
+
+Mon code `newcow.c` complet est ici :
 
 ```
 #include <stdio.h>
@@ -567,7 +586,7 @@ int main(int argc, char* argv[]) {
 }
 ```
 
-Now here is the code for `citation.c`:
+Voici maintenant le code pour `citation.c` :
 
 ```
 #include <stdio.h>
@@ -705,29 +724,29 @@ int find_width(char* filename) {
 }
 ```
 
-`affiche_bordure(int width)` prints a border given a certain width.
-It can print whatever the constant `BORDER_CHAR` is assigned.
+`affiche_bordure(int width)` imprime une bordure d'une certaine largeur.
+Il peut imprimer quelle que soit la constante `BORDER_CHAR` assignée.
 
-`affiche_citation(char* quote)` prints the speech bubble according to a given
-width, keeping its place in the input string according
-to the width multiplied by the line count.
+`affiche_citation(char* quote)` imprime la bulle de dialogue en fonction d'un
+largeur, gardant sa place dans la chaîne d'entrée selon
+à la largeur multipliée par le nombre de lignes.
 
-`affiche_vache()` prints cowsay cow with two custom arguments.
+`affiche_vache()` imprime cowsay cow avec deux arguments personnalisés.
 
-`affiche_dragon()` does the same with a dragon avatar.
+`affiche_dragon()` fait de même avec un avatar de dragon.
 
 `affiche_pretty_image(char* filename, int width)`
-uses system(command) via a buffer to call the library
-jp2a, which converts an image to ASCII art.
+utilise system(command) via un tampon pour appeler la bibliothèque
+jp2a, qui convertit une image en art ASCII.
 
 `affiche_pretty_citation(char* quote, int width)`
-uses system(command) via a buffer to call figlet,
-and produce an ASCII banner according to given width.
+utilise system(command) via un tampon pour appeler figlet,
+et produire une bannière ASCII selon la largeur donnée.
 
-`find_width(char* filename)` finds the width of the
-first line of a file.
+`find_width(char* filename)` trouve la largeur du
+première ligne d'un fichier.
 
-The constants are defined within `constants.c` as follows:
+Les constantes sont définies dans `constants.c` comme suit :
 
 ```
 const int DEFAULT_PRETTY_WIDTH = 300;
@@ -742,22 +761,22 @@ const char VERTICAL_CHAR = '|';
 const char SPACE_CHAR = ' ';
 ```
 
-## Other C files
+## Autres fichiers C
 
-Elsewhere, I have `wildcow.c` which uses the `update`
-and `goto` functions as specified. `animer_vache()`
-is called with a user specified frame rate such
-as 0.5 seconds or 1.2 seconds.
+Ailleurs, j'ai `wildcow.c` qui utilise le `update`
+et les fonctions `goto` comme spécifié. `animer_vache()`
+est appelé avec une fréquence d'images spécifiée par l'utilisateur, telle que
+0,5 seconde ou 1,2 seconde.
 
-This is the speed at which the animation changes.
+C'est la vitesse à laquelle l'animation change.
 
-This then makes a call to `affiche_vache_animee(int frame_increment)`
-which prints the cow at different x and y coordinates
-along the terminal. The idea with the example values
-given is that the cow walks from the top right to
-the bottom left of the terminal screen.
+Cela fait alors un appel à `affiche_vache_animee(int frame_increment)`
+qui imprime la vache à différentes coordonnées x et y
+le long de l'aérogare. L'idée avec les exemples de valeurs
+étant donné que la vache marche du haut à droite vers
+en bas à gauche de l'écran du terminal.
 
-This is the full `wildcow.c` code:
+Voici le code `wildcow.c` complet :
 
 ```
 #include <stdio.h>
@@ -803,8 +822,8 @@ int animer_vache(double frame_rate) {
 }
 ```
 
-Lastly, I have the file `reading_cow.c` which for now is
-still of a skeletal form:
+Enfin, j'ai le fichier `reading_cow.c` qui pour
+l'instant est encore d'une forme squelettique :
 
 ```
 #include <stdio.h>
@@ -829,34 +848,34 @@ char c;
 }
 ```
 
-I was using CLion Windows from a WSL virtual machine. Although
-I learned a lot about makefiles and, in particular,
-the CMake Application, I had some major difficulties
-in trying to work on this file in particular.
+J'utilisais CLion Windows à partir d'une machine virtuelle WSL. Bien que
+J'ai beaucoup appris sur les makefiles et, en particulier,
+l'application CMake, j'ai eu quelques difficultés majeures
+en essayant de travailler sur ce dossier en particulier.
 
-# Automaton
+# Automate
 
-This was the implementation of the cowsay game which
-represents different stages of a cow's hunger, and
-carries us between states based on functions which
-call random number generators.
+C'était la mise en œuvre du jeu du cowsay qui
+représente les différentes étapes de la faim d'une vache, et
+nous transporte entre des états basés sur des fonctions qui
+appeler des générateurs de nombres aléatoires.
 
-I had some problems working out the finer details of logic
-based on the brief game description. For example, for 
-a while I assumed that the game should end when the
-food supply drops below 0. However, I soon realised
-when testing that you still have a chance of surviving
-even if this happens.
+J'ai eu quelques problèmes pour comprendre les détails les plus fins de la logique
+basé sur la brève description du jeu. Par exemple, pour
+un certain temps, j'ai supposé que le jeu devrait se terminer lorsque le
+l'approvisionnement alimentaire tombe en dessous de 0. Cependant, j'ai vite réalisé
+lors du test que vous avez encore une chance de survivre
+même si cela arrive.
 
-I decided to represent more accurate and detailed states
-according to the cow's fitness level than given in the
-project description. This included managing 5 states
-instead of 3. In my implementation, there is a cow
-for `lifesucks` 'hungry' state as well as the
-`lifesucks` 'overfed' state.
+J'ai décidé de représenter des états plus précis et détaillés
+selon le niveau de forme physique de la vache que celui indiqué dans le
+Description du projet. Cela comprenait la gestion de 5 états
+au lieu de 3. Dans mon implémentation, il y a une vache
+pour `lifesucks` 'faim' ainsi que le
+`lifesucks` état 'suralimenté'.
 
-I use a simplified `citation.c` file called
-`bulle_citation.c` to generate the quotations:
+J'utilise un fichier `citation.c` simplifié appelé
+`bulle_citation.c` pour générer les citations :
 
 ```
 #include <stdio.h>
@@ -912,8 +931,8 @@ void affiche_citation(char* quote) {
 }
 ```
 
-The main flow of the game is controlled within
-`tamagoshi_cow.c`:
+Le flux principal du jeu est contrôlé dans
+`tamagoshi_cow.c` :
 
 ```
 #include <stdio.h>
@@ -1114,68 +1133,67 @@ int main() {
     return 0;
 }
 ```
-`affiche_vache(int fitness)` prints the cow according to an integer fitness value.
+`affiche_vache(int fitness)` imprime la vache selon une valeur fitness entière.
 
-`affiche_trophee(int position)` takes the user's final score
-and prints an ASCII trophy with their position on the
-podium (either 1, 2, or 3). The points required
-to get a trophy at these levels changes based upon
-whether the user selected normal or pro mode at the beginning!
+`affiche_trophee(int position)` prend le score final de l'utilisateur
+et imprime un trophée ASCII avec leur position sur le
+podium (soit 1, 2 ou 3). Les points requis
+pour obtenir un trophée à ces niveaux change en fonction de
+si l'utilisateur a sélectionné le mode normal ou pro au début !
 
-`int fitness_update(int lunchfood_fitness)` and
-`int stock_update(int lunchfood_stock)` are implemented
-as required.
+`int fitness_update(int lunchfood_fitness)` et
+`int stock_update(int lunchfood_stock)` sont implémentés
+comme demandé.
 
-`int main()` performs a lot of user input error handling,
-for example not letting the user enter a value of
-`lunchfood` greater than what is
-available in `stock`.
+`int main()` effectue beaucoup de gestion des erreurs de saisie utilisateur,
+par exemple ne pas laisser l'utilisateur entrer une valeur de
+`lunchfood` supérieur à ce qui est
+disponible en "stock".
 
-At the end of the game, statistics are shown along with
-a trophy and podium position, if the user reached the required
-point level.
+À la fin du jeu, les statistiques sont affichées avec
+un trophée et une place sur le podium, si l'utilisateur a atteint le niveau requis des points.
 
-# Summary
+# Résumé
 
-Overall, I learned a lot about tooling and project structure
-in the c language, as well as getting a lot more familiar
-with bash, and the very useful libraries available to those
-developing with it.
+Dans l'ensemble, j'ai beaucoup appris sur l'outillage et la structure de projet
+dans le langage c, ainsi que de se familiariser beaucoup plus
+avec bash, et les bibliothèques très utiles à la disposition de ceux
+développer avec elle.
 
-I tried wherever possible to improve readability by
-leaving comments and by avoiding clutter in main program
-flow files, instead setting up separate files to store
-constants and auxiliary functions.
+J'ai essayé dans la mesure du possible d'améliorer la lisibilité en
+en laissant des commentaires et en évitant l'encombrement du programme principal
+fichiers de flux, au lieu de configurer des fichiers séparés pour stocker
+constantes et fonctions auxiliaires.
 
-This required constant thought about readability and
-design.
+Cela a nécessité une réflexion constante sur la lisibilité et
+conception.
 
-Many of the ideas I worked with here have inspired further
-thinking about ways to improve. For example, the random
-numbers generated for the cowsay game are still
-somewhat deterministic, being based on the time. If I
-had more time, I would love to investigate using
-true random number generators such as those offered
-by random.org through their API.
+Bon nombre des idées avec lesquelles j'ai travaillé ici m'ont inspiré davantage
+réfléchir aux moyens de s'améliorer. Par exemple, le hasard
+les numéros générés pour le jeu cowsay sont toujours
+quelque peu déterministe, étant basé sur le temps. Si je
+avait plus de temps, j'aimerais enquêter en utilisant
+de vrais générateurs de nombres aléatoires tels que ceux proposés
+par random.org via leur API.
 
-I spent about a day coming up with and
-implementing the ASCII art and
-banner generator. This is what I am most proud of as
-it is always nice to show some visual output to others.
-I would love to study ASCII art generation and the 
-mathematics of image processing more, in particular
-the steps of preprocessing and luminance detection
-that I imagine are involved in the libraries I used.
+J'ai passé environ une journée à trouver et
+la mise en œuvre de l'art ASCII et
+générateur de bannières. C'est ce dont je suis le plus fier en tant que
+il est toujours agréable de montrer une sortie visuelle aux autres.
+J'aimerais étudier la génération d'art ASCII et la
+mathématiques du traitement d'image plus, en particulier
+les étapes de prétraitement et de détection de luminance
+que j'imagine sont impliqués dans les bibliothèques que j'ai utilisées.
 
-# Annex: Sample Interactions
+# Annexe : Exemples d'interactions
 
-# Bash Sample Outputs
+# Bash Exemples de sorties
 
 ## cow_kindergarten.sh
 
 `./cow_kindergarten.sh`
 
-This produces a series of cows terminating in the following:
+Cela produit une série de vaches se terminant par :
 
 ```
  ____
@@ -1710,7 +1728,7 @@ lukerabbitte@Death-Star:/mnt/c/Users/luker/CLionProjects/NewCowsay/bash$ ./crazy
 Erreur l'entree doit etre un entier non negatif
 ```
 
-## crazy_cow.sh (initial version with perfect numbers)
+## crazy_cow.sh (version initiale avec des perfect numbers)
 
 ```
 lukerabbitte@Death-Star:/mnt/c/Users/luker/CLionProjects/NewCowsay/bash$ ./crazy_cow.sh 4
@@ -1762,12 +1780,12 @@ lukerabbitte@Death-Star:/mnt/c/Users/luker/CLionProjects/NewCowsay/bash$ ./crazy
 
 ```
 
-# C Sample Outputs
+# C Exemples de sorties
 
 ## newcow.c
 
-Note `newcow.c` uses functions from `citation.c` and
-constants from `constants.c` aswell.
+Remarque `newcow.c` utilise les fonctions de `citation.c` et
+constantes de `constants.c` également.
 
 ```
 lukerabbitte@Death-Star:/mnt/c/Users/luker/CLionProjects/NewCowsay/c/build$ ./NewCowsay hello
@@ -2095,7 +2113,7 @@ lukerabbitte@Death-Star:/mnt/c/Users/luker/CLionProjects/NewCowsay/c/build$ ./Wi
 
 ```
 
-# Automaton Sample Outputs
+# Exemples de sorties d'automates
 
 ```
 C:\Windows\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "cd /mnt/c/Users/luker/CLionProjects/CowsayAutomaton/cmake-build-debug && /mnt/c/Users/luker/CLionProjects/CowsayAutomaton/cmake-build-debug/CowsayAutomaton"

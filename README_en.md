@@ -2,28 +2,28 @@
 
 # Intro
 
-Le programme cowsay affiche un message ou une
-citation à l'écran, en le faisant dire par une
-vache ASCII ou un autre animal ASCII quelconque.
+The cowsay program displays a message or
+quote on the screen, by having it said by an ASCII
+ASCII cow or other ASCII animal.
 
-L'utilisateur peut spécifier le texte à faire dire
-à l'animal en le passant en argument de la ligne
-de commande ou en le saisissant via l'entrée
-standard.
+The user can specify the text to make the animal say
+by passing it as a command line argument or by entering it
+line argument or by entering it via the
+input.
 
-Le programme cowsay peut également prendre en
-charge plusieurs options pour personnaliser la
-sortie, telles que l'utilisation de bulles de
-citation, la sélection d'un avatar spécifique,
+The cowsay program can also support several options for
+The cowsay program can also support several options for customising the
+output, such as the use of speech bubbles, selection of an
+quote bubbles, selection of a specific avatar
 etc.
 
-Enfin, cowsay est utilisé de manière ludique
-pour ajouter une touche d'humour aux programmes.
+Finally, cowsay is used in a playful way
+to add a touch of humour to programmes.
 
-Dans les trois sections suivantes, je discuterai
-de mes choix de code pour mes scripts bash, mes
-programmes c et mon jeu basé sur des automates,
-respectivement.
+In the next three sections, I will discuss
+my code choices for my bash scripts, my c programs
+c programs and my automata-based game,
+respectively.
 
 # Bash
 
