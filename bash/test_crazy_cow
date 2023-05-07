@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Vérifier que l'argument a été donné
+if [ $# -ne 1 ]
+then
+    echo "Il faut appeler le script $0 avec 1 argument"
+    exit 1
+else
+    n=$1
+fi
+
+perfect_numbers_found=0
+number=1
+
+while [ $perfect_numbers_found -lt $n ]
+do
+    sum=0
+    i=1
+    start=$(date +%s.%N)
+    while [ $i -lt $number ]
+    do
+        if [ $((number % i)) -eq 0 ]
+        then
+            sum=$((sum + i))
+        fi
+        i=$((i + 1))
+    done
+
+    if [ $sum -eq $number ]
+    then
+        end=$(date +%s.%N)
+        runtime=$(echo "$end - $start" | bc) # la calcalatrice bc calcule l'intervalle
+        seconds=${runtime%.*}
+        fraction=${runtime#*.}
+        cowsay "Nombre parfait $number trouve en $seconds.$fraction secondes"
+        perfect_numbers_found=$((perfect_numbers_found + 1))
+    fi
+
+    number=$((number + 1))
+done
+
+cowsay -T U "fin d'exercise"
