@@ -1,0 +1,32 @@
+void affiche_pretty_image(char* filename, int width) {
+
+    // Construire une chaîne de commande pour appeler la bibliothèque jp2a dans wsl
+    char command[COMMAND_CHARACTER_LIMIT];
+    char path[PATH_CHARACTER_LIMIT];
+
+    // Construct the jp2a command
+    sprintf(command, "jp2a --width=%d %s", width, filename);
+
+    // Execute the command
+    system(command);
+}
+
+void affiche_pretty_citation(char* quote, int width) {
+
+    // Construire une chaîne de commande pour appeler la bibliothèque figlet dans wsl
+    char command[COMMAND_CHARACTER_LIMIT];
+    sprintf(command, "figlet -w %d \"%s\"", width, quote);
+
+    // Exécuter la commande et imprimer la sortie
+    FILE* fp = popen(command, "r");
+    if (fp == NULL) {
+        printf("Failed to run command\n");
+    }
+
+    char output[OUTPUT_CHARACTER_LIMIT];
+    while (fgets(output, sizeof(output), fp) != NULL) {
+        printf("%s", output);
+    }
+
+    pclose(fp);
+}

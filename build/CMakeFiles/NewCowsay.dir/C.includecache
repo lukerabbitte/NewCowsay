@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/luker/CLionProjects/NewCowsay/citation.c
+stdio.h
+-
+string.h
+-
+citation.h
+/mnt/c/Users/luker/CLionProjects/NewCowsay/citation.h
+
+/mnt/c/Users/luker/CLionProjects/NewCowsay/citation.h
+
+/mnt/c/Users/luker/CLionProjects/NewCowsay/newcow.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+citation.h
+/mnt/c/Users/luker/CLionProjects/NewCowsay/citation.h
+

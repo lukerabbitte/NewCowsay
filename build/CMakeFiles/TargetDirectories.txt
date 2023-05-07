@@ -1,0 +1,3 @@
+/mnt/c/Users/luker/CLionProjects/NewCowsay/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/luker/CLionProjects/NewCowsay/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/luker/CLionProjects/NewCowsay/build/CMakeFiles/NewCowsay.dir
