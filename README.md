@@ -1,4 +1,4 @@
-# INF203 Projet Luke Rabbitte
+# Cowsay Reimplementation and Extension
 
 # Intro
 
