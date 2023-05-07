@@ -2,6 +2,7 @@
 
 # Intro
 
+
 Le programme cowsay affiche un message ou une
 citation à l'écran, en le faisant dire par une
 vache ASCII ou un autre animal ASCII quelconque.
