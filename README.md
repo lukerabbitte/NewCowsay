@@ -1,5 +1,11 @@
 # Cowsay Reimplementation and Extension
 
+# Usage
+
+`lukerabbitte@Death-Star:/mnt/c/Users/luker/CLionProjects/NewCowsay/c/build$ ./NewCowsay -p 200 /mnt/c/Users/luker/CLionProjects/NewCowsay/monks.JPG "This is a small excerpt of a painting I saw at the Musee d'Orsay in Paris" > test_output_2.txt`
+
+![cowsay_demo_2](https://github.com/lukerabbitte/cowsay_projet/assets/72459539/ad53c070-ba76-4f57-92f0-63802897ee93)
+
 # Intro
 
 The cowsay program displays a message or
