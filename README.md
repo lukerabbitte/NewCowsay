@@ -1,4 +1,4 @@
-# Cowsay Reimplementation and Extension
+# ASCII Poster Generator
 
 # Usage
 
