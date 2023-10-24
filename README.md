@@ -6,6 +6,8 @@
 
 ![cowsay_demo_2](https://github.com/lukerabbitte/cowsay_projet/assets/72459539/ad53c070-ba76-4f57-92f0-63802897ee93)
 
+Artist [Leon Benouville](https://commons.wikimedia.org/wiki/File:L%C3%A9on_benouville,_san_francesco,_trasportato_in_fin_di_vita_a_santa_maria_degli_angeli,_benedice_la_citt%C3%A0_di_assisi,_1853.JPG). Check out how I also used this public domain image as [album art](https://open.spotify.com/track/6OiXZapaaBtgw8Ji7ipVY4?si=494d2ac71c394151)!
+
 # Intro
 
 The cowsay program displays a message or
